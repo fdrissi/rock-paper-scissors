@@ -1,0 +1,7 @@
+@import './imports';
+
+#root {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: $container-padding;
+}
