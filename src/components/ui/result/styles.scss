@@ -1,0 +1,124 @@
+@import '../../../styles/imports';
+
+.result {
+  border: 1px solid $golden-border-color;
+  border-radius: 4px;
+  color: white;
+  padding: 2rem 2rem;
+  background-color: rgba(7, 7, 7, 0.3);
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+
+  .position {
+    color: $green-color;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  .info {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .market {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .details {
+      font-weight: 700;
+
+      .sign {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin-left: 0.5rem;
+      }
+
+      .stake {
+        margin-left: 0.5rem;
+      }
+
+      .amount {
+        position: relative;
+        font-weight: 900;
+        margin-left: 2rem;
+
+        &-won {
+          @extend .amount;
+          color: $green-color;
+        }
+
+        &-lost {
+          @extend .amount;
+          color: $red-color;
+        }
+      }
+
+      .amount:before {
+        content: '>';
+        position: absolute;
+        color: $golden-border-color;
+        font-size: 16px;
+        left: -1.3rem;
+        top: -15%;
+      }
+    }
+  }
+
+  .info:before {
+    content: '';
+    width: 1px; /* Increase width for visibility */
+    height: 60%;
+    background-color: $golden-border-color; /* Remove quotes around 'red' */
+    position: absolute; /* Position relative to the .position element */
+    top: 25%;
+    left: -1rem; /* Adjust the left position */
+    z-index: 1; /* Ensure it appears above other content if needed */
+  }
+  .info:after {
+    content: '';
+    width: 1px; /* Increase width for visibility */
+    height: 60%;
+    background-color: $golden-border-color; /* Remove quotes around 'red' */
+    position: absolute; /* Position relative to the .position element */
+    top: 25%;
+    right: -1rem; /* Adjust the left position */
+    z-index: 1; /* Ensure it appears above other content if needed */
+  }
+
+  .status {
+    color: white;
+    padding: 0px 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 1.125rem;
+    text-align: center;
+    font-size: 0.625rem;
+    line-height: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0px 0.4rem;
+    border-radius: 100px;
+    border: 1px solid;
+
+    &-won {
+      @extend .status;
+      background-color: $green-bg;
+      border-color: $green-color;
+    }
+
+    &-lost {
+      @extend .status;
+      background-color: $red-bg;
+      border-color: $red-border-color;
+    }
+  }
+}

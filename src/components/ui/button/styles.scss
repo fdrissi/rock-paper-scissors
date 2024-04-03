@@ -1,0 +1,28 @@
+@import '../../../styles/imports';
+
+.button {
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 900;
+  border: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &-primary {
+    @extend .button;
+    padding: 0.875rem 2rem;
+    border-radius: 40px;
+    background-color: $black;
+    color: $golden-color;
+    border: 1px solid $golden-border-color;
+    text-transform: uppercase;
+  }
+}
