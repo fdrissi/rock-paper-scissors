@@ -1,0 +1,8 @@
+{
+  "baseBalance": 5000,
+  "maxAllowedNumberOfSelections": 2,
+  "minStake": 500,
+  "stakeIncrementor": 500,
+  "odds": [14, 3],
+  "tieOdds": [1, 0]
+}
