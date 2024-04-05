@@ -24,16 +24,17 @@
     justify-content: space-between;
     align-items: center;
 
-    .market {
+    .match {
       font-size: 14px;
       font-weight: 600;
+      text-transform: capitalize;
     }
 
     .details {
       font-weight: 700;
 
       .sign {
-        font-size: 18px;
+        font-size: 10px;
         text-transform: uppercase;
         font-weight: 900;
         margin-left: 0.5rem;
@@ -57,6 +58,11 @@
           @extend .amount;
           color: $red-color;
         }
+
+        &-tie {
+          @extend .amount;
+          color: $golden-color;
+        }
       }
 
       .amount:before {
@@ -72,23 +78,23 @@
 
   .info:before {
     content: '';
-    width: 1px; /* Increase width for visibility */
+    width: 1px;
     height: 60%;
-    background-color: $golden-border-color; /* Remove quotes around 'red' */
-    position: absolute; /* Position relative to the .position element */
+    background-color: $golden-border-color;
+    position: absolute;
     top: 25%;
-    left: -1rem; /* Adjust the left position */
-    z-index: 1; /* Ensure it appears above other content if needed */
+    left: -1rem;
+    z-index: 1;
   }
   .info:after {
     content: '';
-    width: 1px; /* Increase width for visibility */
+    width: 1px;
     height: 60%;
-    background-color: $golden-border-color; /* Remove quotes around 'red' */
-    position: absolute; /* Position relative to the .position element */
+    background-color: $golden-border-color;
+    position: absolute;
     top: 25%;
-    right: -1rem; /* Adjust the left position */
-    z-index: 1; /* Ensure it appears above other content if needed */
+    right: -1rem;
+    z-index: 1;
   }
 
   .status {
@@ -108,6 +114,7 @@
     padding: 0px 0.4rem;
     border-radius: 100px;
     border: 1px solid;
+    text-transform: uppercase;
 
     &-won {
       @extend .status;
@@ -119,6 +126,12 @@
       @extend .status;
       background-color: $red-bg;
       border-color: $red-border-color;
+    }
+
+    &-tie {
+      @extend .status;
+      background-color: $bg-from;
+      border-color: $golden-border-color;
     }
   }
 }

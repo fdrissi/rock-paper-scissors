@@ -1,17 +1,17 @@
-import { EPOSITION } from '../../../types';
+import { E_POSITION, E_STATUS } from '../../../types';
 import './styles.scss';
 
 interface IProps {
-  status: 'won' | 'lost';
-  wonPosition: EPOSITION;
-  market: string;
+  status: E_STATUS.WON | E_STATUS.LOST | E_STATUS.TIE;
+  wonPosition: E_POSITION;
+  match: string;
   odds: number;
   stake: number;
   wonAmount: number;
 }
 
 const Result = ({
-  market,
+  match,
   odds,
   stake,
   status,
@@ -22,15 +22,15 @@ const Result = ({
     <div className="result">
       <div className="position">{wonPosition}</div>
       <div className="info">
-        <div className="market">{market}</div>
+        <div className="match">{match}</div>
         <div className="details">
           <span>{odds}</span>
           <span className="sign">x</span>
           <span className="stake">{stake}$</span>
-          <span className="amount-won">{wonAmount}$</span>{' '}
+          <span className={`amount-${status}`}>{wonAmount}$</span>{' '}
         </div>
       </div>
-      <div className="status-won">{status}</div>
+      <div className={`status-${status}`}>{status}</div>
     </div>
   );
 };

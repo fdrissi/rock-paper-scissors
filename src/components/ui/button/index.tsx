@@ -3,7 +3,7 @@ import './styles.scss';
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  variant?: 'primary';
+  variant?: 'primary' | 'secondary';
 }
 
 function Button({ children, variant = 'primary', ...props }: IProps) {

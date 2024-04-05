@@ -1,15 +1,15 @@
 import './styles.scss';
 
-interface Props {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
   color: 'green' | 'red' | 'blue';
-  bet?: number;
+  stake?: number;
   children: React.ReactNode;
 }
 
-const Card = ({ color, bet, children }: Props) => {
+const Card = ({ color, stake, children, ...props }: IProps) => {
   return (
-    <div className={`card-${color}`}>
-      {bet && <div className="bet">{bet}</div>}
+    <div className={`card-${color}`} {...props}>
+      {stake && <div className="stake">{stake}</div>}
       <div className="label">{children}</div>
     </div>
   );

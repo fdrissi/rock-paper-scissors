@@ -17,6 +17,10 @@
     text-transform: uppercase;
   }
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &-red {
     @extend .card;
     background-color: $red-bg;
@@ -36,6 +40,7 @@
       color: $blue-color;
     }
   }
+
   &-green {
     @extend .card;
     background-color: $green-bg;
@@ -46,13 +51,13 @@
     }
   }
 
-  .bet {
+  .stake {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
     border-radius: 50%;
-    border: 3px solid $blue-bet-amount-circle-border;
+    border: 3px solid $blue-stake-circle-border;
     color: #000000;
     font-weight: 600;
     padding: 6px 2px;

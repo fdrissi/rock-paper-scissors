@@ -25,4 +25,14 @@
     border: 1px solid $golden-border-color;
     text-transform: uppercase;
   }
+
+  &-secondary {
+    @extend .button;
+    padding: 0.875rem 2rem;
+    border-radius: 40px;
+    background-color: $bg-from;
+    border: 1px solid $black;
+    text-transform: uppercase;
+    color: white;
+  }
 }

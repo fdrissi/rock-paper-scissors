@@ -1,7 +1,7 @@
 import './styles.scss';
 
 interface IProps {
-  balance: number;
+  balance?: number;
   bet?: number;
   wonAmount?: number;
 }
