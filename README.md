@@ -1,30 +1,14 @@
-# React + TypeScript + Vite
+# ROCK PAPER SCISSORS Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Hows to run
 
-Currently, two official plugins are available:
+`nvm use 18 && yarn && yarn dev`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
 
-## Expanding the ESLint configuration
+- TypeScript
+- React
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Screenshot
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<img width="1725" alt="Screenshot 2024-04-05 at 06 44 54" src="https://github.com/fdrissi/rock-paper-scissors/assets/43388336/c37ed3c8-e36c-41ad-94fd-16c4841253df">
